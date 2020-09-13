@@ -1,0 +1,7 @@
+.idea
+__pycache__
+*venv/
+linux_env/
+*.env
+*.log
+xss_bot.js

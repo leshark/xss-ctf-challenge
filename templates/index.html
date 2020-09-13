@@ -1,0 +1,30 @@
+{% from 'macros.html' import footer %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text shortener</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<header class="header">
+    <a class="info styled" href="https://en.wikipedia.org/wiki/Run-length_encoding">about us</a>
+    <a class="styled" href="/report">Contact the Administrator</a>
+</header>
+<div class="content" style="color:white">
+    <form action="/" class="form-inline centered" method="get">
+        <h1>Welcome to a text shortener service</h1>
+        {% if value %}
+        {% autoescape off %}
+        <input name="text" type="text" placeholder="Enter your text" value="{{ value|e }}">
+        {% endautoescape %}
+        {% else %}
+        <input name="text" type="text" placeholder="Enter your text">
+        {% endif %}
+        <button type="submit">Shorten!</button>
+        <p class="result">{{ r_short }}</p>
+    </form>
+</div>
+{{ footer() }}
+</body>
+</html>

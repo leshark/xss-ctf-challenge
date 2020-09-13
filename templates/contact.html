@@ -1,0 +1,25 @@
+{% from 'macros.html' import footer %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text shortener</title>
+    <link rel="stylesheet" href="static/style.css">
+    <!-- TODO uncomment in prod <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</head>
+<body>
+<div class="content" style="color:white">
+    <form action="/report" class="form-inline centered" method="post">
+        <h1>Report bug link to the administrator</h1>
+        <input name="link" type="text" placeholder="Enter link">
+        <button type="submit">Report</button>
+        <div class="captcha-box">
+            <div class="g-recaptcha" style="padding: 20px" data-theme="dark"
+                 data-sitekey="{{ site_key }}"></div>
+        </div>
+        <p class="result">{{ result }}</p>
+    </form>
+</div>
+{{ footer() }}
+</body>
+</html>
