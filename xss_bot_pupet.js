@@ -30,5 +30,6 @@ const url = myArgs[0];
     });
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 10000});
     console.log("[INFO] rendered page: " + url);
+    await page.close();
     await browser.close();
 })();
